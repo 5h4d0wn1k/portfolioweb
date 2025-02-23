@@ -1,14 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <circle cx="64" cy="64" r="60" stroke="currentColor" stroke-width="8" fill="none" />
-    <path d="M64 20 L84 100 L44 100 Z" fill="currentColor" />
-    <path d="M64 20 L84 100 L44 100 Z" stroke="currentColor" stroke-width="4" fill="none" />
-    <path d="M64 20 L84 100 L44 100 Z" stroke="currentColor" stroke-width="2" fill="none" />
+    <!-- Main circle -->
+    <circle cx="64" cy="64" r="58" stroke="currentColor" stroke-width="6" fill="none"/>
+    
+    <!-- Shield shape -->
+    <path d="M64 30 L90 45 L90 75 L64 95 L38 75 L38 45 Z" fill="none" stroke="currentColor" stroke-width="6"/>
+    
+    <!-- Letter N -->
+    <path d="M52 55 L52 80 M52 55 L76 80 M76 55 L76 80" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Decorative elements -->
+    <circle cx="64" cy="64" r="40" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="64" cy="64" r="48" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
+    
     <style>
-        circle { stroke: #000; }
-        path { fill: #000; }
+        circle, path { 
+            stroke: #000;
+            transition: all 0.3s ease;
+        }
         @media (prefers-color-scheme: dark) {
-            circle { stroke: #FFF; }
-            path { fill: #FFF; }
+            circle, path { 
+                stroke: #FFF;
+            }
         }
     </style>
 </svg>
