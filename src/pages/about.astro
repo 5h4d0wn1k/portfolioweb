@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Nikhil Nagpure" description="About Nikhil Nagpure - Cybersecurity Specialist & Full Stack Developer">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Learn about my background, education, and professional experience."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/pfp.jpg"
+					alt="Nikhil Nagpure at work"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						A passionate cybersecurity specialist and full stack developer with expertise in both offensive and defensive security practices. Currently pursuing B.Tech in Computer Science with specialization in Cybersecurity at VIT Bhopal University.
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>
+						<strong>VIT Bhopal University, India</strong><br>
+						B.Tech in Computer Science with specialization in Cybersecurity (2021 - 2025)<br>
+						CGPA: 8.26/10
+					</p>
+					<p>
+						<strong>Keshav English School, India</strong><br>
+						Higher Secondary Education (2020 - 2021)<br>
+						Percentage: 82.4%
+					</p>
+					<p>
+						<strong>Keshav English School, India</strong><br>
+						Secondary Education (2018 - 2019)<br>
+						Percentage: 82%
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Professional Experience</h2>
+				<div class="content">
+					<p>
+						<strong>Shadownik (MSME Registered)</strong><br>
+						Founder and CEO (June 2024 - Present)
+						<ul>
+							<li>Founded and leading a cybersecurity and digital solutions company</li>
+							<li>Managing a diverse team of 15 members including international talent</li>
+							<li>Developing open-source SIEM tools with advanced capabilities</li>
+							<li>Providing comprehensive web development and hosting services</li>
+						</ul>
+					</p>
+					<p>
+						<strong>Ethical Hacking Intern</strong> (Nov 2023 - Dec 2023)
+						<ul>
+							<li>Conducted security assessments and vulnerability testing</li>
+							<li>Specialized in XSS vulnerability identification and mitigation</li>
+							<li>Created detailed security assessment reports</li>
+						</ul>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Volunteer Experience</h2>
+				<div class="content">
+					<p>
+						<strong>DEFCON Franklin IT Security Project</strong><br>
+						Cybersecurity Infrastructure Defender (October 2024 - Present)
+						<ul>
+							<li>Contributing to critical infrastructure security initiatives</li>
+							<li>Participating in vulnerability assessment and threat mitigation</li>
+							<li>Collaborating with global security experts</li>
+						</ul>
+					</p>
+					<p>
+						<strong>Ministry of Home Affairs, India</strong><br>
+						Cybersecurity Awareness Volunteer and Cyber Expert (August 2024 - Present)
+						<ul>
+							<li>Conducting cybersecurity awareness programs</li>
+							<li>Providing expert consultation on cyber threats</li>
+							<li>Contributing to national cybersecurity initiatives</li>
+						</ul>
+					</p>
+					<p>
+						<strong>Health O Tech Club, VIT Bhopal</strong><br>
+						Core Member (July 2021)
+						<ul>
+							<li>Led technical initiatives and workshops</li>
+							<li>Organized health-tech related events</li>
+						</ul>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Publications & Patents</h2>
+				<div class="content">
+					<p>
+						<strong>Patent Filed:</strong> "A SELF-CLEANING GLASSES CASE SYSTEM"<br>
+						Application No: 202421032123
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Achievements</h2>
+				<div class="content">
+					<p>
+						<strong>Competitions & Rankings:</strong>
+						<ul>
+							<li>Ranked 36th in CyVIT CTF competition at VIT Bhopal</li>
+							<li>Participated in DSA Dash, Smart India Hackathon, and Kavach (March 2023)</li>
+							<li>Top 12% on TryHackMe Globally</li>
+							<li>Under world's top 600 in Bug Base</li>
+							<li>Active contributor on Leetcode and Hack The Box platforms</li>
+						</ul>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>
+						<strong>Security Skills:</strong> GRC, NIST, Vulnerability Assessment, Penetration Testing<br>
+						<strong>Technical Skills:</strong> Linux Administration, APIs, Networking, Python, Java, DSA, UI/UX Design, Full Stack Development
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Certifications</h2>
+				<div class="content">
+					<p>
+						• Certified Ethical Hacker (CEH) - EC-Council<br>
+						• Certified Network Security Practitioner (CNSP) - The SecOps Group<br>
+						• Practical Ethical Hacking - TCM Security<br>
+						• Python Specialization - Michigan University<br>
+						• HTB Penetration Testing Path
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	.content ul {
+		list-style-type: disc;
+		padding-left: 1.5rem;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.content ul li {
+		margin-bottom: 0.5rem;
+	}
+
+	.content p {
+		margin-bottom: 1rem;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

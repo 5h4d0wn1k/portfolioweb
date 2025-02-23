@@ -1,0 +1,145 @@
+---
+import Icon from './Icon.astro';
+
+const contactInfo = {
+  phone: '+91 9754887018',
+  email: 'nikhilnapure203@gmail.com',
+  github: 'https://github.com/5h4d0wn1k',
+  linkedin: 'https://www.linkedin.com/in/nikhilnagpure24/',
+  facebook: 'https://www.facebook.com/nikhilnagpure09',
+  instagram: 'https://www.instagram.com/nikhilnagpure09/',
+  twitter: 'https://twitter.com/nikhilnagpure_'
+};
+
+const education = [
+  { institution: 'Keshav English School India', degree: 'B.Tech in Computer Science with specialization in Cybersecurity', years: 'June 2018 - 2019', percentage: '82%' },
+  { institution: 'Keshav English School India', degree: 'B.Tech in Computer Science with specialization in Cybersecurity', years: 'June 2020 - 2021', percentage: '82.4%' },
+  { institution: 'VIT Bhopal University India', degree: 'B.Tech in Computer Science with specialization in Cybersecurity', years: 'June 2021 - 2025', cgpa: '8.26/10' }
+];
+
+const skills = {
+  security: ['GRC', 'NIST', 'Vulnerability Assessment', 'Penetration Testing'],
+  technical: ['Linux Administration', 'APIs', 'Networking', 'Python', 'Java', 'DSA', 'UI/UX Design', 'Fullstack Development']
+};
+
+const certifications = [
+  'Certified Ethical Hacker (CEH) - EC-Council',
+  'Certified Network Security Practitioner (CNSP) - The SecOps Group',
+  'Practical Ethical Hacking (TCM Security)',
+  'Python Specialization (Coursera from Michigan University)',
+  'Currently following HTB penetration testing Job role path'
+];
+
+const experience = [
+  { title: 'Founder and CEO', company: 'Shadownik', duration: 'June 2024 - Present', description: 'Founded and led a startup focused on cybersecurity, digital marketing, web development, and hosting services. Currently managing a team of 15 members, including one international member from Nigeria.' },
+  { title: 'Ethical Hacking Intern', company: 'N/A', duration: 'Nov 2023 - Dec 2023', description: 'Conducted comprehensive security assessments, systematically identifying and ethically exploiting Cross-Site Scripting (XSS) vulnerabilities across diverse web platforms.' }
+];
+
+const projects = [
+  { title: 'Open-Source SIEM Platform', link: 'https://github.com/5h4d0wn1k/enterprise-siem-platform', description: 'Security Information and Event Management (SIEM) solution with sophisticated offensive and defensive cybersecurity capabilities.' },
+  { title: 'Secure Warning Platform for Web Attack Detection', link: 'https://github.com/5h4d0wn1k/A-Secure-Warning-Platform-From-Web-Attacks-Using-Machine-Learning', description: 'Developed a machine learning platform detecting phishing, DoS, and XSS attacks with 90% accuracy.' }
+];
+
+const volunteerExperience = [
+  { role: 'Volunteer - Cybersecurity Infrastructure Defender', organization: 'DEFCON Franklin IT Security Project', duration: 'October 2024 - Present' },
+  { role: 'Cybersecurity Awareness Volunteer and Cyber Expert', organization: 'Ministry of Home Affairs, India', duration: 'August 2024 - Present' }
+];
+
+const publications = [
+  { title: 'Filed patent: "A SELF-CLEANING GLASSES CASE SYSTEM"', applicationNo: '202421032123' }
+];
+
+const achievements = [
+  'Ranked 36th in CyVIT CTF competition at VIT Bhopal',
+  'Top 12% on TryHackMe Globally',
+  'Active contributor on Leetcode and Hack The Box platforms'
+];
+
+---
+
+<section>
+  <h1>Nikhil Nagpure</h1>
+  <p>Phone: {contactInfo.phone}</p>
+  <p>Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
+  <div>
+    <h2>Contact Links</h2>
+    <ul>
+      <li><a href={contactInfo.github}>GitHub</a></li>
+      <li><a href={contactInfo.linkedin}>LinkedIn</a></li>
+      <li><a href={contactInfo.facebook}>Facebook</a></li>
+      <li><a href={contactInfo.instagram}>Instagram</a></li>
+      <li><a href={contactInfo.twitter}>Twitter</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Education</h2>
+    <ul>
+      {education.map(edu => (
+        <li>{edu.institution}: {edu.degree} ({edu.years}) - {edu.percentage || edu.cgpa}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Skills</h2>
+    <h3>Security Skills</h3>
+    <ul>
+      {skills.security.map(skill => <li>{skill}</li>)}
+    </ul>
+    <h3>Technical Skills</h3>
+    <ul>
+      {skills.technical.map(skill => <li>{skill}</li>)}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Certifications and Courses</h2>
+    <ul>
+      {certifications.map(cert => <li>{cert}</li>)}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Experience</h2>
+    <ul>
+      {experience.map(exp => (
+        <li>{exp.title} at {exp.company} ({exp.duration}): {exp.description}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Projects</h2>
+    <ul>
+      {projects.map(proj => (
+        <li><a href={proj.link}>{proj.title}</a>: {proj.description}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Volunteer Experience</h2>
+    <ul>
+      {volunteerExperience.map(vol => (
+        <li>{vol.role} at {vol.organization} ({vol.duration})</li>
+      ))}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Publications</h2>
+    <ul>
+      {publications.map(pub => (
+        <li>{pub.title} (Application No: {pub.applicationNo})</li>
+      ))}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Activities and Achievements</h2>
+    <ul>
+      {achievements.map(ach => <li>{ach}</li>)}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,75 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string | undefined;
+	description?: string | undefined;
+}
+
+const {
+	title = 'Nikhil Nagpure: Portfolio Site',
+	description = 'The personal site of Nikhil Nagpure',
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
+	rel="stylesheet"
+/>
+<script is:inline>
+	// This code is inlined in the head to make dark mode instant & blocking.
+	const getThemePreference = () => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme');
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+	const isDark = getThemePreference() === 'dark';
+	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
+
+	if (typeof localStorage !== 'undefined') {
+		// Watch the document element and persist user preference when it changes.
+		const observer = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('theme-dark');
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		});
+		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	}
+</script>
+
+<meta name="description" content="Nikhil Nagpure's personal website showcasing skills in cybersecurity, web development, and digital marketing." />
+<meta name="keywords" content="Cybersecurity, Web Development, Digital Marketing, Ethical Hacking, Fullstack Development" />
+<meta name="author" content="Nikhil Nagpure" />
+<meta property="og:title" content="Nikhil Nagpure - Cybersecurity and Web Development" />
+<meta property="og:description" content="Explore Nikhil Nagpure's skills, projects, and experience in cybersecurity and web development." />
+<meta property="og:image" content="/path/to/your/image.jpg" />
+<meta property="og:url" content="https://yourwebsite.com" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nikhil Nagpure",
+  "url": "https://yourwebsite.com",
+  "sameAs": [
+    "https://github.com/5h4d0wn1k",
+    "https://www.linkedin.com/in/nikhilnagpure24/",
+    "https://www.facebook.com/nikhilnagpure09",
+    "https://www.instagram.com/nikhilnagpure09/",
+    "https://twitter.com/nikhilnagpure_"
+  ],
+  "jobTitle": "Founder and CEO",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Shadownik"
+  }
+}
+</script>
