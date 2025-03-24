@@ -1,0 +1,33 @@
+name: Deploy Portfolio Website with SEO
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build with SEO optimization
+        run: npm run build:seo
+        
+      - name: Deploy to hosting (customize for your host)
+        # Replace this with your actual deployment step
+        # Examples:
+        # - For Netlify: npx netlify-cli deploy --prod
+        # - For Vercel: npx vercel --prod
+        # - For GitHub Pages: See github-pages-deploy-action
+        run: echo "Replace with your deployment command" 

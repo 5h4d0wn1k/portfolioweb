@@ -1,13 +1,44 @@
 # robots.txt for Nikhil Nagpure's Portfolio
 # https://portfolio.shadownik.tech
 
-# Allow all web crawlers
+# Allow all web crawlers with highest crawl rate
 User-agent: *
 Allow: /
+Crawl-delay: 1
+
+# Special instruction for Google
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/*.svg$
 
 # Allow Google Images to index all images
 User-agent: Googlebot-Image
 Allow: /assets/
 
-# Sitemap location
-Sitemap: https://portfolio.shadownik.tech/sitemap.xml 
+# Special instruction for Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Special instructions for social media crawlers
+User-agent: Twitterbot
+Allow: /
+Priority: 1
+
+User-agent: facebookexternalhit
+Allow: /
+Priority: 1
+
+# Sitemap locations
+Sitemap: https://portfolio.shadownik.tech/sitemap.xml
+Sitemap: https://portfolio.shadownik.tech/sitemap-extended.xml
+
+# Additional SEO directives for search engines
+User-agent: *
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico 

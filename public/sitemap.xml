@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Homepage -->
   <url>
     <loc>https://portfolio.shadownik.tech/</loc>
-    <lastmod>2024-07-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- About Page -->
   <url>
     <loc>https://portfolio.shadownik.tech/about/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2024-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -19,50 +22,99 @@
   <!-- Work/Projects Page -->
   <url>
     <loc>https://portfolio.shadownik.tech/work/</loc>
-    <lastmod>2024-07-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Individual Project Pages -->
   <url>
     <loc>https://portfolio.shadownik.tech/work/metatask/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2024-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://portfolio.shadownik.tech/work/social-media-saas/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2024-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://portfolio.shadownik.tech/work/offensive-scanner/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2024-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://portfolio.shadownik.tech/work/open-source-siem/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://portfolio.shadownik.tech/work/siem-platform/</loc>
+    <lastmod>2024-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://portfolio.shadownik.tech/work/web-development-services/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2024-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://portfolio.shadownik.tech/work/cybersecurity-education/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://portfolio.shadownik.tech/work/cybersecurity-platform/</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://portfolio.shadownik.tech/work/shadownik-platform/</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://portfolio.shadownik.tech/work/secure-warning-platform/</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://portfolio.shadownik.tech/work/decentralized-storage/</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://portfolio.shadownik.tech/work/client-3/</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://portfolio.shadownik.tech/work/sunrise-school/</loc>
+    <lastmod>2024-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

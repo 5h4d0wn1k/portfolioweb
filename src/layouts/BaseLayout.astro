@@ -6,13 +6,24 @@
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import SEOSchema from '../components/SEOSchema.astro';
 
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	image?: string | undefined;
+	pageType?: string | undefined;
 }
 
-const { title, description } = Astro.props;
+const { 
+	title = 'Nikhil Nagpure | Cybersecurity Expert & Full Stack Developer',
+	description = 'Official Portfolio of Nikhil Nagpure - Cybersecurity Specialist, Web3 Developer & Founder of Shadownik',
+	image = '/assets/portrait.png',
+	pageType = 'WebPage'
+} = Astro.props;
+
+// Get current URL for SEO
+const currentUrl = Astro.url.pathname;
 ---
 
 <html lang="en">
@@ -20,6 +31,22 @@ const { title, description } = Astro.props;
 		<MainHead title={title} description={description} />
 		<!-- Google Search Console verification -->
 		<meta name="google-site-verification" content="nikhil_nagpure_portfolio_verification" />
+		
+		<!-- Indexing instructions -->
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		
+		<!-- Tell Google this is your official page -->
+		<link rel="author" href="https://www.linkedin.com/in/nikhilnagpure24" />
+		<link rel="publisher" href="https://www.shadownik.online" />
+		
+		<!-- Page-specific schema markup -->
+		<SEOSchema
+			pageTitle={title}
+			description={description}
+			pageUrl={currentUrl}
+			imageUrl={image}
+			type={pageType}
+		/>
 	</head>
 	<body>
 		<div class="stack backgrounds">
@@ -31,6 +58,14 @@ const { title, description } = Astro.props;
 		<script>
 			// Add "loaded" class once the document has completely loaded.
 			addEventListener('load', () => document.documentElement.classList.add('loaded'));
+		</script>
+
+		<!-- Google Search Indexing Helper -->
+		<script type="text/javascript">
+			// This helps Google understand this is a legitimate site
+			window.onload = function() {
+				document.title = document.title || "Nikhil Nagpure | Cybersecurity Expert & Full Stack Developer";
+			}
 		</script>
 
 		<style>

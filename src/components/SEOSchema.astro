@@ -1,0 +1,51 @@
+---
+interface Props {
+  type?: string;
+  pageTitle: string;
+  description: string;
+  pageUrl: string;
+  imageUrl?: string;
+}
+
+const {
+  type = "WebPage",
+  pageTitle,
+  description,
+  pageUrl,
+  imageUrl = "https://portfolio.shadownik.tech/assets/portrait.png"
+} = Astro.props;
+
+const fullUrl = new URL(pageUrl, Astro.site || 'https://portfolio.shadownik.tech').toString();
+const fullImageUrl = new URL(imageUrl, Astro.site || 'https://portfolio.shadownik.tech').toString();
+
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@type": type,
+  "name": pageTitle,
+  "description": description,
+  "url": fullUrl,
+  "image": fullImageUrl,
+  "author": {
+    "@type": "Person",
+    "name": "Nikhil Nagpure",
+    "url": "https://portfolio.shadownik.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Nikhil Nagpure",
+    "sameAs": [
+      "https://github.com/5h4d0wn1k",
+      "https://www.linkedin.com/in/nikhilnagpure24/",
+      "https://www.shadownik.online"
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": fullUrl
+  }
+};
+
+const schemaJson = JSON.stringify(baseSchema);
+---
+
+<script type="application/ld+json" set:html={schemaJson}></script> 
