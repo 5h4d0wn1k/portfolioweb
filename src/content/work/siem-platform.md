@@ -1,8 +1,8 @@
 ---
 title: Open-Source SIEM Platform
 publishDate: 2024-01-15 00:00:00
-img: /assets/stock-1.jpg
-img_alt: Security Information and Event Management Dashboard
+img: https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80
+img_alt: Advanced security operations center monitoring dashboard
 description: |
   A comprehensive SIEM solution with sophisticated offensive and defensive cybersecurity capabilities, featuring advanced threat detection and real-time monitoring.
 tags:

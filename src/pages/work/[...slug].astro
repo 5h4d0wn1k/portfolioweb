@@ -7,6 +7,7 @@ import ContactCTA from '../../components/ContactCTA.astro';
 import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
+import ProjectSchema from '../../components/ProjectSchema.astro';
 import { render } from 'astro:content';
 
 interface Props {
@@ -26,9 +27,19 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const currentPath = `/work/${entry.id}`;
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.description}>
+<BaseLayout title={`Nikhil Nagpure | ${entry.data.title}`} description={entry.data.description}>
+	<ProjectSchema
+		title={entry.data.title}
+		description={entry.data.description}
+		publishDate={entry.data.publishDate}
+		image={entry.data.img}
+		imageAlt={entry.data.img_alt || entry.data.title}
+		tags={entry.data.tags}
+		url={currentPath}
+	/>
 	<div class="stack gap-20">
 		<div class="stack gap-15">
 			<header>

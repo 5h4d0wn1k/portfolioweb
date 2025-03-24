@@ -1,8 +1,8 @@
 ---
 title: Secure Warning Platform
 publishDate: 2022-10-15 00:00:00
-img: /assets/stock-2.jpg
-img_alt: Web Attack Detection System Interface
+img: https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80
+img_alt: Cybersecurity monitoring dashboard with analytics
 description: |
   Machine learning-powered platform for detecting phishing, DoS, and XSS attacks with 90% accuracy, featuring real-time threat detection.
 tags:

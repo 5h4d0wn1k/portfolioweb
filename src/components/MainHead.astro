@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-	title = 'Nikhil Nagpure: Portfolio Site',
-	description = 'The personal site of Nikhil Nagpure',
+	title = 'Nikhil Nagpure | Cybersecurity Expert & Full Stack Developer',
+	description = 'Official Portfolio of Nikhil Nagpure - Cybersecurity Specialist, Web3 Developer & Founder of Shadownik',
 } = Astro.props;
 ---
 
@@ -46,30 +46,75 @@ const {
 	}
 </script>
 
-<meta name="description" content="Nikhil Nagpure's personal website showcasing skills in cybersecurity, web development, and digital marketing." />
-<meta name="keywords" content="Cybersecurity, Web Development, Digital Marketing, Ethical Hacking, Fullstack Development" />
+<!-- Enhanced SEO Metadata for Nikhil Nagpure -->
+<meta name="description" content="Nikhil Nagpure - Experienced Cybersecurity Specialist, Full Stack Developer, and Web3 Creator. Founder of Shadownik, Certified Ethical Hacker (CEH) with expertise in penetration testing, NIST frameworks, and secure application development." />
+<meta name="keywords" content="Nikhil Nagpure, Nikhil, Nagpure, Cybersecurity Expert, Ethical Hacker, CEH, NIST, GRC, Web Development, Digital Marketing, Full Stack Developer, Penetration Testing, Web3, Blockchain, VIT Bhopal, Shadownik, SIEM, Security, Java, Python, Next.js" />
 <meta name="author" content="Nikhil Nagpure" />
-<meta property="og:title" content="Nikhil Nagpure - Cybersecurity and Web Development" />
-<meta property="og:description" content="Explore Nikhil Nagpure's skills, projects, and experience in cybersecurity and web development." />
-<meta property="og:image" content="/path/to/your/image.jpg" />
-<meta property="og:url" content="https://yourwebsite.com" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://portfolio.shadownik.tech" />
+
+<!-- Open Graph / Social Media -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Nikhil Nagpure | Cybersecurity Expert & Full Stack Developer" />
+<meta property="og:description" content="Official portfolio of Nikhil Nagpure featuring cybersecurity expertise, full stack development projects, and digital solutions. Founder of Shadownik and certified security professional." />
+<meta property="og:image" content="https://portfolio.shadownik.tech/assets/portrait.png" />
+<meta property="og:url" content="https://portfolio.shadownik.tech" />
+<meta property="og:site_name" content="Nikhil Nagpure - Portfolio" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@NikhilNagpure" />
+<meta name="twitter:title" content="Nikhil Nagpure | Cybersecurity & Web Development" />
+<meta name="twitter:description" content="Nikhil Nagpure - Cybersecurity specialist, full stack developer, and founder of Shadownik with expertise in ethical hacking and secure application development." />
+<meta name="twitter:image" content="https://portfolio.shadownik.tech/assets/portrait.png" />
+
+<!-- Structured Data for Person -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Nikhil Nagpure",
-  "url": "https://yourwebsite.com",
+  "url": "https://portfolio.shadownik.tech",
+  "image": "https://portfolio.shadownik.tech/assets/portrait.png",
   "sameAs": [
     "https://github.com/5h4d0wn1k",
     "https://www.linkedin.com/in/nikhilnagpure24/",
-    "https://www.facebook.com/nikhilnagpure09",
-    "https://www.instagram.com/nikhilnagpure09/",
-    "https://twitter.com/nikhilnagpure_"
+    "https://www.shadownik.online"
   ],
   "jobTitle": "Founder and CEO",
   "worksFor": {
     "@type": "Organization",
-    "name": "Shadownik"
+    "name": "Shadownik",
+    "url": "https://www.shadownik.online"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "VIT Bhopal University",
+    "url": "https://www.vitbhopal.ac.in/"
+  },
+  "knowsAbout": ["Cybersecurity", "Ethical Hacking", "Web Development", "Blockchain", "Web3", "NIST Framework", "Full Stack Development", "Penetration Testing"]
+}
+</script>
+
+<!-- Structured Data for Professional Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nikhil Nagpure - Cybersecurity & Development Services",
+  "url": "https://portfolio.shadownik.tech",
+  "logo": "https://portfolio.shadownik.tech/assets/portrait.png",
+  "description": "Professional cybersecurity and web development services including penetration testing, security assessments, and full stack development by Nikhil Nagpure.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "India"
+  },
+  "priceRange": "$$",
+  "serviceType": ["Cybersecurity Consulting", "Web Development", "Security Testing", "Digital Marketing"],
+  "founder": {
+    "@type": "Person",
+    "name": "Nikhil Nagpure"
   }
 }
 </script>

@@ -1,0 +1,13 @@
+# robots.txt for Nikhil Nagpure's Portfolio
+# https://portfolio.shadownik.tech
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Allow Google Images to index all images
+User-agent: Googlebot-Image
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://portfolio.shadownik.tech/sitemap.xml 

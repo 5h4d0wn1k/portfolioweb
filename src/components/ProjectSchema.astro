@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  publishDate: Date;
+  image: string;
+  imageAlt: string;
+  tags: string[];
+  url: string;
+}
+
+const { title, description, publishDate, image, imageAlt, tags, url } = Astro.props;
+const fullImageUrl = new URL(image, Astro.site || 'https://portfolio.shadownik.tech').toString();
+const fullUrl = new URL(url, Astro.site || 'https://portfolio.shadownik.tech').toString();
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  'headline': title,
+  'description': description,
+  'image': fullImageUrl,
+  'datePublished': publishDate.toISOString(),
+  'author': {
+    '@type': 'Person',
+    'name': 'Nikhil Nagpure',
+    'url': 'https://portfolio.shadownik.tech'
+  },
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'Nikhil Nagpure',
+    'logo': {
+      '@type': 'ImageObject',
+      'url': 'https://portfolio.shadownik.tech/favicon.svg'
+    }
+  },
+  'mainEntityOfPage': {
+    '@type': 'WebPage',
+    '@id': fullUrl
+  },
+  'keywords': tags.join(', '),
+  'about': [
+    {
+      '@type': 'Thing',
+      'name': 'Cybersecurity'
+    },
+    {
+      '@type': 'Thing',
+      'name': 'Web Development'
+    },
+    {
+      '@type': 'Thing',
+      'name': 'Nikhil Nagpure Projects'
+    }
+  ]
+})}>
+</script> 

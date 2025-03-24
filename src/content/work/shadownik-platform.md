@@ -1,8 +1,8 @@
 ---
 title: Shadownik Platform
 publishDate: 2024-06-01 00:00:00
-img: /assets/stock-4.jpg
-img_alt: Shadownik Platform Dashboard
+img: https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80
+img_alt: Professional cybersecurity service dashboard with analytics
 description: |
   Comprehensive cybersecurity and digital solutions platform offering website creation, hosting, and security services.
 tags:

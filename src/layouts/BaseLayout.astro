@@ -18,6 +18,8 @@ const { title, description } = Astro.props;
 <html lang="en">
 	<head>
 		<MainHead title={title} description={description} />
+		<!-- Google Search Console verification -->
+		<meta name="google-site-verification" content="nikhil_nagpure_portfolio_verification" />
 	</head>
 	<body>
 		<div class="stack backgrounds">
@@ -27,7 +29,7 @@ const { title, description } = Astro.props;
 		</div>
 
 		<script>
-			// Add “loaded” class once the document has completely loaded.
+			// Add "loaded" class once the document has completely loaded.
 			addEventListener('load', () => document.documentElement.classList.add('loaded'));
 		</script>
 
