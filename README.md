@@ -58,4 +58,5 @@ Fork, make your changes, and submit a pull request. Keep the SEO build pipeline 
 
 ## License
 
-No explicit license — all rights reserved by the author.
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
